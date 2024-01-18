@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Asynchoronous Shop</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 20rem 20rem 20rem;
+            grid-template-rows: 20rem;
+            gap: 20px;
+        }
+
+        .item {
+            width: 300px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+        }
+
+        .item img {
+            width: 300px;
+            height: 200px;
+        }
+
+        .item:hover {
+            border: 1px solid red;
+        }
+
+        .item button,.genBtn {
+            transition: all .5s ease-in-out;
+            margin-top: 20px;
+            color: white;
+            background-color: black;
+            border: transparent;
+            padding: 7px;
+            border-radius: 5px;
+        }
+
+        .item button:hover {
+            color: black;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The Accessories Shop</h1>
+    <div class="container">
+        <div class="item laptop"><img
+                src="https://images.unsplash.com/photo-1533908279087-2448f4554f18?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRhcmslMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D"
+                alt="">
+            <button class="btn" onclick="placeOrder('laptop' , 50000)" id="laptop">order (price : 50000)</button>
+        </div>
+        <div class="item speaker"><img
+                src="https://img.freepik.com/premium-photo/image-photograph-pair-hifi-level-music-speakers-with-two-speakers-black-background_88135-33694.jpg"
+                alt="">
+            <button class="btn" onclick="placeOrder('speaker' , 2000)" id="speaker">order (price : 2000)</button>
+        </div>
+        <div class="item mouse"><img src="https://freerangestock.com/sample/2898/mouse-on-black.jpg" alt="">
+            <button class="btn" onclick="placeOrder('mouse' , 1000)" id="mouse">order (price : 1000)</button>
+        </div>
+        <div class="item keyboard"><img
+                src="https://images.unsplash.com/photo-1543271082-cf645d49dcc7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+            <button class="btn" onclick="placeOrder('keyboard' , 2000)" id="keyboard">order (price : 2000)</button>
+        </div>
+        <div class="item monitor"><img
+                src="https://img.freepik.com/premium-photo/close-up-computer-monitor-with-blank-screen-copy-space-black-background_772924-4253.jpg"
+                alt="">
+            <button class="btn" onclick="placeOrder('monitor' , 5000)" id="monitor">order (price : 5000)</button>
+        </div>
+        <div class="item pc"><img src="https://i.pinimg.com/originals/a5/c7/99/a5c7997ca72d6754c217b779f2a37dcd.jpg"
+                alt="">
+            <button class="btn" onclick="placeOrder('pc' , 30000)" id="pc">order (price : 30000)</button>
+        </div>
+    </div>
+    <button onclick="generateBill()" class="genBtn">Bill</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
